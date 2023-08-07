@@ -1,0 +1,27 @@
+{
+  "name": "playlists",
+  "version": "0.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint . --ext .mjs,.cjs,.mts,.cts",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "glob": "^10.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@sequencemedia/hooks": "^1.0.444",
+    "core-js": "^3.32.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.46.0",
+    "eslint-config-standard": "^17.1.0",
+    "husky": "^8.0.3"
+  }
+}
