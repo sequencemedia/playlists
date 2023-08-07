@@ -27,7 +27,7 @@ function transform (fileData) {
   const alpha = fileData.toString().split(EOL).map(trim).filter(Boolean)
   const omega = []
   const [
-    first
+    header
   ] = alpha
 
   let i = 1
@@ -37,7 +37,7 @@ function transform (fileData) {
   }
 
   return Buffer.from(
-    omega.sort(sort).reduce(reduce, [first]).map(trim).filter(Boolean).join(EOL)
+    omega.sort(sort).reduce(reduce, [header]).map(trim).filter(Boolean).join(EOL)
   )
 }
 
