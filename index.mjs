@@ -1,8 +1,9 @@
 import { glob } from 'glob'
 import { readFile, writeFile } from 'node:fs/promises'
+import { PATH } from './config/index.mjs'
 
 async function getFilePathList () {
-  return await glob('./m3u8/**/*.m3u8')
+  return await glob(`${PATH}/**/*.m3u8`)
 }
 
 function * genFileData (filePathList) {
@@ -45,7 +46,6 @@ const EOL = '\r'
 
 async function execute () {
   const filePathList = await getFilePathList()
-
   for (const filePath of genFileData(filePathList)) {
     await writeFile(filePath, transform(await readFile(filePath)))
   }
