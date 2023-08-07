@@ -16,5 +16,3 @@ if has_package_changes;
 then
   npx cross-env DEBUG=@sequencemedia/hooks* node .husky/post-commit.mjs
 fi
-
-echo 👋
