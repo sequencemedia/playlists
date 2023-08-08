@@ -20,7 +20,7 @@ function reduce (accumulator, lines) {
   return accumulator.concat(lines)
 }
 
-function trim (line) {
+function trim (line = '') {
   return line.trim()
 }
 
