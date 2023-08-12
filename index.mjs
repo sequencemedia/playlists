@@ -25,7 +25,7 @@ function trim (line = '') {
 }
 
 function transform (fileData) {
-  const alpha = fileData.toString().split(EOL).map(trim).filter(Boolean)
+  const alpha = fileData.toString().split(CR).map(trim).filter(Boolean)
   const omega = []
   const [
     header
@@ -38,11 +38,12 @@ function transform (fileData) {
   }
 
   return Buffer.from(
-    omega.sort(sort).reduce(reduce, [header]).map(trim).filter(Boolean).join(EOL)
+    omega.sort(sort).reduce(reduce, [header]).map(trim).filter(Boolean).join(CRLF)
   )
 }
 
-const EOL = '\r'
+const CR = '\r'
+const CRLF = '\r\n'
 
 async function execute () {
   const filePathList = await getFilePathList()
