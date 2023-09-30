@@ -25,11 +25,10 @@ function trim (line = '') {
 }
 
 function transform (fileData) {
-  const alpha = fileData.toString().split(CR).map(trim).filter(Boolean)
+  const s = fileData.toString('utf8')
+
+  const alpha = (s.includes(CR) ? s.split(CR) : s.split(LF)).map(trim).filter(Boolean)
   const omega = []
-  const [
-    header
-  ] = alpha
 
   let i = 1
   const j = alpha.length
@@ -37,13 +36,17 @@ function transform (fileData) {
     omega.push(alpha.slice(i, i + 2))
   }
 
+  const [
+    header
+  ] = alpha
+
   return Buffer.from(
-    omega.sort(sort).reduce(reduce, [header]).map(trim).filter(Boolean).join(CRLF)
+    omega.sort(sort).reduce(reduce, [header]).map(trim).filter(Boolean).join(LF) + LF
   )
 }
 
 const CR = '\r'
-const CRLF = '\r\n'
+const LF = '\n'
 
 async function execute () {
   const filePathList = await getFilePathList()
