@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "eslint . --ext .mjs,.cjs,.mts,.cts",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "glob": "^10.3.10",
@@ -22,7 +22,7 @@
     "@babel/core": "^7.23.9",
     "@babel/eslint-parser": "^7.23.10",
     "@babel/preset-env": "^7.23.9",
-    "@sequencemedia/hooks": "^1.0.480",
+    "@sequencemedia/hooks": "^1.0.481",
     "core-js": "^3.36.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
