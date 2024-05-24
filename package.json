@@ -15,7 +15,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "glob": "^10.3.16",
+    "glob": "^10.4.0",
     "nconf": "^0.12.1"
   },
   "devDependencies": {
