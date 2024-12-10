@@ -1,6 +1,6 @@
 {
   "name": "playlists",
-  "version": "0.0.141",
+  "version": "0.0.142",
   "main": "./index.mjs",
   "type": "module",
   "author": {
