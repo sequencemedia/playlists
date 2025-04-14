@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "glob": "^11.0.1",
-    "nconf": "^0.12.1"
+    "nconf": "^0.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
