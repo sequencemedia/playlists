@@ -18,7 +18,7 @@
     "core-js@3.51.0": true
   },
   "dependencies": {
-    "glob": "^14.0.4",
+    "glob": "^14.0.6",
     "nconf": "^0.13.0"
   },
   "devDependencies": {
